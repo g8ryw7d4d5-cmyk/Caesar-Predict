@@ -1,0 +1,12 @@
+{
+  "name": "caesar-predict",
+  "version": "1.0.0",
+  "description": "Caesar Predict football prediction website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
