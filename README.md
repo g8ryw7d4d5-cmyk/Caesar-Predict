@@ -1,22 +1,23 @@
-# Caesar Predict V2.1
+# Caesar Predict V2.1.3
 
-Mobile-friendly football prediction dashboard using API-Football.
+Football prediction dashboard powered by API-Football.
+
+## V2.1.3 changes
+- Groups fixtures under their league headings.
+- Keeps league filters for Premier League, La Liga and Champions League.
+- Free-plan API calls are deliberately spaced to respect the 10 requests/minute limit.
+- Only a small number of prediction endpoints are requested per page load; fixtures without API prediction coverage are labelled clearly instead of showing fake data.
+- Detailed analysis requests are sequential and cached.
+- Uses the fixture's season for team-history analysis.
 
 ## Render
+- Runtime: Node
+- Build command: `npm install`
+- Start command: `npm start`
 - Root Directory: blank
-- Build Command: `npm install`
-- Start Command: `npm start`
-- Environment variable: `API_FOOTBALL_KEY` = your private API-Football key
 
-## V2.1 features
-- Live fixtures and API prediction percentages
-- League filters and team/league search
-- Top Picks based on the highest returned 1X2 percentage (descriptive, not a guarantee)
-- Best Bet display based on the highest returned 1X2 percentage
-- Confidence band from the returned percentage
-- Over/Under and expected goals when provided by the API
-- Match analysis on demand: recent form, H2H, goals and BTTS context
-- Refresh button
-- No invented correct-score predictions
+## Environment variable
+Set `API_FOOTBALL_KEY` in Render. Never commit the real key to GitHub.
 
-Never commit your real API key to GitHub.
+## Important free-plan limits
+API-Football's current Free plan provides 100 requests/day and a 10 requests/minute limit. Caesar Predict therefore uses caching and a request queue. Some competitions/fixtures may not have prediction coverage; those are shown as unavailable rather than invented.
