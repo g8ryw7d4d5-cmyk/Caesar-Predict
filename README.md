@@ -1,22 +1,35 @@
-# Caesar Predict V2.1
+# Caesar Predict V2.1.1
 
-Mobile-friendly football prediction dashboard using API-Football.
+Football prediction dashboard powered by API-Football.
 
-## Render
-- Root Directory: blank
+## Features
+- Live football fixtures and team logos
+- Home / Draw / Away prediction percentages
+- Best Bet and confidence band
+- Over / Under goal range
+- Team form, H2H, goals and BTTS analysis
+- Top Picks section
+- Match search and league filters
+- Mobile-friendly dashboard
+
+## Render deployment
+- Runtime: Node
+- Root Directory: leave blank
 - Build Command: `npm install`
 - Start Command: `npm start`
-- Environment variable: `API_FOOTBALL_KEY` = your private API-Football key
 
-## V2.1 features
-- Live fixtures and API prediction percentages
-- League filters and team/league search
-- Top Picks based on the highest returned 1X2 percentage (descriptive, not a guarantee)
-- Best Bet display based on the highest returned 1X2 percentage
-- Confidence band from the returned percentage
-- Over/Under and expected goals when provided by the API
-- Match analysis on demand: recent form, H2H, goals and BTTS context
-- Refresh button
-- No invented correct-score predictions
+## Environment variable
+Set this on Render:
 
-Never commit your real API key to GitHub.
+`API_FOOTBALL_KEY=YOUR_PRIVATE_API_KEY`
+
+Never put your real API key in GitHub or in this README.
+
+## API usage
+The server keeps a short cache and the detailed analysis uses supported date-range fixture requests instead of the restricted `last` parameter.
+
+## Version
+V2.1.1
+
+## Important
+The prediction percentages are supplied by the football-data API and are not a guarantee of match results.
